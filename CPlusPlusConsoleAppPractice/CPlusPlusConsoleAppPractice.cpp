@@ -5,7 +5,9 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello World!" << std::endl;// std means standard; cout means character_output; together std::cout stands for standard_character_output
+    std::cout << "I like pizza" << std::endl;// std means standard; cout means character_output; together std::cout stands for standard_character_output
+    std::cout << "It is savoury goodness" << std::endl;// std means standard; cout means character_output; together std::cout stands for standard_character_output
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
