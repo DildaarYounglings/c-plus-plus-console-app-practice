@@ -4,46 +4,33 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <list>
 
 int main() {
-	char op;
-	double num1;
-	double num2;
-	double result;
-
-	std::cout << "************************************************** CALCULATOR **********************************************" << "\n";
-	std::cout << " Enter eith {+ - * /} to choose your opperation \n";
-	std::cin >> op;
-	std::cout << " Enter 1st number \n";
-	std::cin >> num1;
-	std::cout << " Enter 2nd number \n";
-	std::cin >> num2;
-	switch (op)
-	{
-		case '+':
-			result = num1 + num2;
-			std::cout << "result: " << result << '\n';
-			break;
-		case '-':
-			result = num1 - num2;
-			std::cout << "result: " << result << '\n';
-			break;
-		case '*':
-			result = num1 * num2;
-			std::cout << "result: " << result << '\n';
-			break;
-		case '/':
-			result = num1 / num2;
-			std::cout << "result: " << result << '\n';
-			break;
-		default:
-			std::cout << " Try again and invalid character or response typed:" << op;
-			break;
+	double temp;
+	char unit;
+	std::cout << "********************************************* Temperature Conversion Programe ******************************************";
+	std::cout << "F = Fahrenheit\n";
+	std::cout << "C = Celsius\n";
+	std::cout << "what woud you like to convert to: ";
+	std::cin >> unit;
+	if(unit == 'F' || unit == 'f'){
+		std::cout << "Enter the temperature in Celsius: ";
+		std::cin >> temp;
+		temp = (1.8 * temp) + 32.0;
+		std::cout << "Temperature is: " << temp << "F\n";
 	}
-	std::cout << "************************************************************************************************************" << "\n";
-
-	return 0;
+	else if(unit == 'C' || unit == 'c'){
+		std::cout << "Enter the temperature in Fahrenheit: ";
+		std::cin >> temp;
+		temp = (temp - 32) / 1.8;
+		std::cout << "Temperature is: " << temp << "C\n";
+	}
+	else{
+		std::cout << "please enter 'C','c','F' or 'f'";
+	}
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
