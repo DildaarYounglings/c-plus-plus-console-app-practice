@@ -9,10 +9,25 @@
 #include <ctime>
 
 int main() {
-	// pseudo-random = NOT truly random (but close)
-	int num = (rand() % 20) + 1;
-	std::cout << "you rolled the following number: " << num << '\n';
-
+	srand(time(0));
+	int randNum = rand() % 5 + 1;
+	switch (randNum) {
+		case 1:
+			std::cout << "you win a bumper sticker!\n";
+			break;
+		case 2:
+			std::cout << "you win a t-shirt!\n";
+			break;
+		case 3:
+			std::cout << "you win a free lunch!\n";
+			break;
+		case 4:
+			std::cout << "you win a gift card!\n";
+			break;
+		case 5:
+			std::cout << "you win a concert ticketa!\n";
+			break;
+	}
 	return 0;
 }
 
