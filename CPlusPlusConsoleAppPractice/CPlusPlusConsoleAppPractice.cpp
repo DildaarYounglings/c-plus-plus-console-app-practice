@@ -6,34 +6,14 @@
 #include <cmath>
 #include <string>
 #include <list>
-// useful string methods //
+#include <ctime>
+
 int main() {
-	std::string name;
-	std::cout << "Enter your name: ";
-	std::getline(std::cin, name);
-	// empty method will return a bool value based on if your string is empty or not //
-	if (name.empty()) {
-		std::cout << "you didnt type a name even for the string";
-	}
-	//	at method returns a character from a index specified in the string	//
-	name.at(0);
-	//	append method alsws add of a string to another string	//
-	name.append("r");
-	//	insert method adds a string at the specified index	//
-	name.insert(
-		/*index of where yo want to insert*/
-			0,
-		/*value that you want to insert in this string*/
-		"D"
-	);
-	std::cout << "your name is now " << name;
-	//	length method will get you the length of a string 	//
-	if (name.length() > 12) {
-		std::cout << "your name " << name;
-		std::cout << " is more tham 12 characters. here is the character count of the string: " << name.length() << "\n"; 
-	}
-	//	clear method will delete every character in the string //
-	name.clear();
+	// pseudo-random = NOT truly random (but close)
+	int num = (rand() % 20) + 1;
+	std::cout << "you rolled the following number: " << num << '\n';
+
+	return 0;
 }
 
 
