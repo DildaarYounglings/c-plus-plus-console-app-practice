@@ -9,25 +9,27 @@
 #include <ctime>
 
 int main() {
-	srand(time(0));
+	int num = 0;
+	int guess = 0;
+	int tries = 0;
+
+	srand(time(NULL));
 	int randNum = rand() % 5 + 1;
-	switch (randNum) {
-		case 1:
-			std::cout << "you win a bumper sticker!\n";
-			break;
-		case 2:
-			std::cout << "you win a t-shirt!\n";
-			break;
-		case 3:
-			std::cout << "you win a free lunch!\n";
-			break;
-		case 4:
-			std::cout << "you win a gift card!\n";
-			break;
-		case 5:
-			std::cout << "you win a concert ticketa!\n";
-			break;
-	}
+	std::cout << "**********	Number Guessing Game	**********\n";
+	do {
+		std::cout << "Enter a guess between (1-100): ";
+		std::cin >> guess;
+		tries++;
+		if (guess > num) {
+			std::cout << "Too high!\n";
+		}else if(guess < num) {
+			std::cout << "Too low!\n";
+		}else {
+			std::cout << "Correct! # number of tries: " << tries << '\n';
+		}
+	} while (guess != num);
+	std::cout << "*****************************************************************************************************\n";
+
 	return 0;
 }
 
